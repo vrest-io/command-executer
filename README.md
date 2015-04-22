@@ -1,0 +1,32 @@
+# Command Executor utility
+
+Command executor utility is used to execute command over REST APIs
+
+## Prerequisites
+* Node.js - Download and Install [Node.js](http://www.nodejs.org/download/)
+
+## Quick Install
+  The quickest way to get started with Command Executor Utility is to clone the project and utilize it like this:
+
+  Install dependencies:
+    $ cd command-executor
+    $ npm install
+
+  Then start the server using following command:
+
+  	$ PORT=3001 node server.js 
+
+  	PORT: Port number on which command executor utility server will run
+
+  To use the command executor utility, please follow the following points:
+
+    * All dumps must be stored inside the command-executor directory, but in arbitrary directory structure of your choice.
+    * Suppose you have MySQL dump stored at location app-name/1.0.0/mysql/dumps/app-init.sql inside command-executor directory
+    * Then you need to invoke the following through REST API to restore the dump
+    ** {{commandExecutorBaseURL}}/execute?command=mysql -uroot test-db < app-name/1.0.0/mysql/dumps/app-init.sql
+
+## Troubleshooting and Feedback
+For any issues / feedback, please contact Dheeraj Aggarwal <dheeraj.aggarwal@optimizory.com>
+
+## License
+Copyright Optimizory, All rights reserved
