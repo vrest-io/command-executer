@@ -21,10 +21,12 @@ Command executor utility is used to execute command over REST APIs
 
   To use the command executor utility, please follow the following points:
 
-    * All dumps must be stored inside the command-executor directory, but in arbitrary directory structure of your choice.
-    * Suppose you have MySQL dump stored at location app-name/1.0.0/mysql/dumps/app-init.sql inside command-executor directory
-    * Then you need to invoke the following through REST API to restore the dump
-      ** {{commandExecutorBaseURL}}/execute?command=mysql -uroot test-db < app-name/1.0.0/mysql/dumps/app-init.sql
+    * Format: {{commandExecutorBaseURL}}/execute?command=<cmd to execute>
+    * Note: 
+      ** All dumps must be stored inside the command-executor directory, but in arbitrary directory structure of your choice.
+      ** Suppose you have MySQL dump stored at location app-name/1.0.0/mysql/dumps/app-init.sql inside command-executor directory
+      ** Then you need to invoke the following through REST API to restore the dump
+         **** {{commandExecutorBaseURL}}/execute?command=mysql -uroot test-db < app-name/1.0.0/mysql/dumps/app-init.sql
 
 ## Troubleshooting and Feedback
 For any issues / feedback, please contact Dheeraj Aggarwal <dheeraj.aggarwal@optimizory.com>
