@@ -1,0 +1,11 @@
+{
+  "name": "dumper",
+  "description": "Command execution utility",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Dheeraj Kumar Aggarwal <dheeraj.aggarwal@optimizory.com>",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
