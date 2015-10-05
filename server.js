@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
     var query = url_parts.query,
       command = query.command,
       delay = query.delay,
-      limit = 100000,
+      limit = (query.limit && parseInt(query.limit)) || 100000,
       childProcess = null;
 
     console.log("Command : " + command);
@@ -54,7 +54,6 @@ http.createServer(function (req, res) {
           onResponse();
         }
       });
-      //console.log(childProcess);
     } else {
       error = "Invalid arguments.";
     }

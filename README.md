@@ -23,13 +23,13 @@ Command executor utility is used to execute command over REST APIs
 
     * Format: {{commandExecutorBaseURL}}/execute?command=<cmd to execute>
     * Note: 
-      ** All dumps must be stored inside the command-executor directory, but in arbitrary directory structure of your choice.
-      ** Suppose you have MySQL dump stored at location app-name/1.0.0/mysql/dumps/app-init.sql inside command-executor directory
+      ** All the scripts / data / dumps must be stored in any arbitrary directory structure of your choice, but that directory should be inside command-executor directory.
+      ** Suppose you have MySQL dump stored at location <command-executor DIRECTORY>/app-name/1.0.0/mysql/dumps/app-init.sql
       ** Then you need to invoke the following through REST API to restore the dump
          **** {{commandExecutorBaseURL}}/execute?command=mysql -uroot test-db < app-name/1.0.0/mysql/dumps/app-init.sql
 
 ## Troubleshooting and Feedback
-For any issues / feedback, please contact Dheeraj Aggarwal <dheeraj.aggarwal@optimizory.com>
+For any issues / feedback, please contact vREST Support <support@vrest.io>
 
 ## License
-Copyright Optimizory, All rights reserved
+License MIT
